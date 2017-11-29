@@ -19,10 +19,16 @@ Yarn and NodeJs 8.0.0 or later versions must be installed on your system.
 Before you can use this, but after installing necessary packages. Navigate to the project root in the File Explorer/Manager.
 
 ### File 1: WINTOOLS
-Go to `<PROJECT_ROOT>/node_modules/wintools/lib/ps.js`. Modify LINE 11 to be `exec('wmic process list /format:csv', {maxBuffer: 2000*1024}, function (err, stdout, stderr) {`
+Go to `<PROJECT_ROOT>/node_modules/wintools/lib/ps.js`. Modify LINE 11 to be
+```javascript
+exec('wmic process list /format:csv', {maxBuffer: 2000*1024}, function (err, stdout, stderr) {
+```
 
 ### File 2: NODE-SPOTIFY-WEBHELPER
-Go to `<PROJECT_ROOT>/mode_modules/node-spotify-webhelper/index.js`. Modify LINE 158 to be `return util.format("http://%s:%d%s", generateRandomLocalHostName(), localPort, url)`
+Go to `<PROJECT_ROOT>/mode_modules/node-spotify-webhelper/index.js`. Modify LINE 158 to be
+```javascipt
+return util.format("http://%s:%d%s", generateRandomLocalHostName(), localPort, url)
+```
 
 # Requests
 We are always looking for new features to add! If you have a feature request, please tell us on our Official Discord Server [Here](https://discord.gg/FUmdfB4)
